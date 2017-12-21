@@ -84,7 +84,7 @@ FitbitApiClient.prototype = {
     },
 
     // extraHeaders is optional
-    get: function (path, accessToken, userId, extraHeaders, apiVersion) {
+    get: function (path, accessToken, {userId: userId, extraHeaders: extraHeaders, apiVersion: apiVersion} = {}) {
         var deferred = Q.defer();
 
         Request({
@@ -107,7 +107,7 @@ FitbitApiClient.prototype = {
     },
 
     // extraHeaders is optional
-    post: function (path, accessToken, data, userId, extraHeaders, apiVersion) {
+    post: function (path, accessToken, {data: data, userId: userId, extraHeaders: extraHeaders, apiVersion: apiVersion} = {}) {
         var deferred = Q.defer();
 
         Request({
@@ -131,7 +131,7 @@ FitbitApiClient.prototype = {
     },
 
     // extraHeaders is optional
-    put: function (path, accessToken, data, userId, extraHeaders, apiVersion) {
+    put: function (path, accessToken, {data: data, userId: userId, extraHeaders: extraHeaders, apiVersion: apiVersion} = {}) {
         var deferred = Q.defer();
 
         Request({
@@ -155,7 +155,7 @@ FitbitApiClient.prototype = {
     },
 
     // extraHeaders is optional
-    delete: function (path, accessToken, userId, extraHeaders, apiVersion) {
+    delete: function (path, accessToken, {userId: userId, extraHeaders: extraHeaders, apiVersion: apiVersion} = {}) {
         var deferred = Q.defer();
 
         Request({
